@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { User } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export const DashboardHeader = () => {
   const navItems = [
@@ -15,7 +15,9 @@ export const DashboardHeader = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-8">
-            <h1 className="text-2xl font-bold text-primary">SkillPass</h1>
+            <Link to="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
+              SkillPass
+            </Link>
             
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-6">

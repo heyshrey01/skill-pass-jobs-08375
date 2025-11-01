@@ -34,6 +34,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-full font-semibold"
+              onClick={() => window.location.href = '/employer/create-role'}
             >
               I'm an Employer
             </Button>

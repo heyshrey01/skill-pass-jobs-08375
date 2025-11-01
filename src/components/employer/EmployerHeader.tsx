@@ -1,5 +1,5 @@
 import { Building2 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 export const EmployerHeader = () => {
@@ -14,7 +14,9 @@ export const EmployerHeader = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <h1 className="text-2xl font-bold text-primary">SkillPass</h1>
+            <Link to="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
+              SkillPass
+            </Link>
             
             <nav className="hidden md:flex items-center gap-6">
               {navItems.map((item) => (

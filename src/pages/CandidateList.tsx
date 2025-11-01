@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { EmployerHeader } from "@/components/employer/EmployerHeader";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -63,6 +63,7 @@ const mockCandidates: Candidate[] = [
 
 const CandidateList = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const roleData = location.state?.roleData || {
     roleTitle: "Software Engineer",
     companyName: "Acme Corp",
@@ -216,7 +217,12 @@ const CandidateList = () => {
                             </Badge>
                           </TableCell>
                           <TableCell className="text-right">
-                            <Button variant="outline" size="sm" className="rounded-full">
+                            <Button 
+                              variant="outline" 
+                              size="sm" 
+                              className="rounded-full"
+                              onClick={() => navigate(`/employer/student/${candidate.name.toLowerCase().replace(/\s+/g, '-')}`)}
+                            >
                               View Profile
                             </Button>
                           </TableCell>
